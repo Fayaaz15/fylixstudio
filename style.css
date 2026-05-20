@@ -32,10 +32,11 @@ body {
     background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
-    cursor: none;
+    cursor: auto;
 }
 
-a { text-decoration: none; color: inherit; }
+a, a * { text-decoration: none; color: inherit; cursor: pointer !important; }
+button { cursor: pointer !important; }
 ul { list-style: none; }
 
 .container {
@@ -285,9 +286,9 @@ nav.scrolled {
 /* ===== REVEAL ANIMATIONS ===== */
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(25px);
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reveal.visible {
@@ -710,6 +711,10 @@ nav.scrolled {
     font-size: 15px;
     color: var(--accent);
     transition: gap 0.3s;
+    cursor: pointer !important;
+    pointer-events: all !important;
+    position: relative;
+    z-index: 10;
 }
 
 .project-link:hover { gap: 14px; }
@@ -971,7 +976,4 @@ footer p {
     .container { padding: 0 24px; }
 
     #about, #projects, #services, #contact { padding: 80px 0; }
-}
-body {
-    cursor: default; /* change this from 'none' to 'default' */
 }
