@@ -62,10 +62,10 @@ function checkReveals() {
     const reveals = document.querySelectorAll('.reveal');
     reveals.forEach((el, i) => {
         const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.88) {
+        if (rect.top < window.innerHeight * 0.97) {
             setTimeout(() => {
                 el.classList.add('visible');
-            }, i * 80);
+            }, i * 30);
         }
     });
 }
@@ -89,8 +89,8 @@ window.addEventListener('scroll', animateSkillBars);
 const titleLines = document.querySelectorAll('.title-line');
 titleLines.forEach((line, i) => {
     line.style.opacity = '0';
-    line.style.transform = 'translateY(40px)';
-    line.style.transition = `opacity 0.8s ease ${0.3 + i * 0.15}s, transform 0.8s ease ${0.3 + i * 0.15}s`;
+    line.style.transform = 'translateY(25px)';
+    line.style.transition = `opacity 0.35s ease ${0.15 + i * 0.08}s, transform 0.35s ease ${0.15 + i * 0.08}s`;
     setTimeout(() => {
         line.style.opacity = '1';
         line.style.transform = 'translateY(0)';
