@@ -13,23 +13,6 @@ document.body.style.overflow = 'hidden';
 
 
 
-// Cursor hover effects
-document.querySelectorAll('a, button, .project-card, .service-card').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursor.style.width = '20px';
-        cursor.style.height = '20px';
-        cursor.style.background = 'var(--accent2)';
-        cursorFollower.style.width = '50px';
-        cursorFollower.style.height = '50px';
-    });
-    el.addEventListener('mouseleave', () => {
-        cursor.style.width = '10px';
-        cursor.style.height = '10px';
-        cursor.style.background = 'var(--accent)';
-        cursorFollower.style.width = '36px';
-        cursorFollower.style.height = '36px';
-    });
-});
 
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
